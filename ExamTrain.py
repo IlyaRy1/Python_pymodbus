@@ -26,10 +26,26 @@ not_change = [5, 5.0, complex(2,3), True, None, "Hello", (4, False, "Name"), b"\
 change = [[4, None, "h"], {'c':7,'my':'name'}, set([5, "re", False]), bytearray(b"\x01\x02")]
 
 # id() - функция, позволяющая получить уникальный идентификатор объекта (адрес в памяти)
-def go(var):
+def go(var): # def имя_функции(аргументы): тело функции
     for v in var:
         print(v, "-> type: ", type(v), ", id: ", id(v))
 
 go(not_change)
 go(change)
 
+# Циклы и условия
+i = 0
+
+print("\nWhile loop:")
+while i!=5:
+    print(i)
+    i+=1
+
+print("\nFor loop:")
+for x in range(7,13):
+    if x ==8:
+        continue # Пропуск текущей итерации, переход к следующей
+    elif x ==11:
+        break # Прерывание цикла
+    else:
+        print(x)
